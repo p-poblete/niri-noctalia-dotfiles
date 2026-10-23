@@ -1,0 +1,7 @@
+# User-owned icon recoloring; source themes and cursor are left intact.
+[theme.templates.user.adaptive_icons]
+enabled = false
+index = 1
+input_path = "__HOME__/.local/share/noctalia-icon-sync/palette.json.in"
+output_path = "__HOME__/.local/share/noctalia-icon-sync/palette.json"
+post_hook = "sh __HOME__/.local/share/noctalia-icon-sync/apply.sh"

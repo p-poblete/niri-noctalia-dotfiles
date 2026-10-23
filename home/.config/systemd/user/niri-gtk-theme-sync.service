@@ -1,0 +1,11 @@
+[Unit]
+Description=Synchronize Noctalia colors with GTK settings
+PartOf=niri.service
+After=niri.service
+
+[Service]
+ExecStart=__HOME__/.local/bin/niri-gtk-theme-sync
+Restart=on-failure
+RestartSec=3
+Environment=XDG_CONFIG_HOME=__HOME__/.config/niri-session
+Environment=DCONF_PROFILE=__HOME__/.config/niri/dconf-profile

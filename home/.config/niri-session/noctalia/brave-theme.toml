@@ -1,0 +1,5 @@
+[theme.templates.user.brave_local]
+enabled = false
+input_path = "__HOME__/.config/niri-session/noctalia/templates/brave-manifest.json"
+output_path = "__HOME__/.local/share/noctalia/brave-theme/rendered.json"
+post_hook = "python3 __HOME__/.local/share/ricing-apps/install-brave-theme.py"

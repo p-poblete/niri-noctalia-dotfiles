@@ -1,0 +1,289 @@
+/* Colores del segundo cerebro: carpetas y páginas principales. */
+
+.nav-folder-title[data-path="Cursos"] {
+  color: #60A5FA;
+  --nav-item-color: #60A5FA;
+  --nav-item-color-hover: #60A5FA;
+  --nav-collapse-icon-color: #60A5FA;
+  font-weight: 650;
+  border-inline-start: 3px solid #60A5FA;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #60A5FA 9%, transparent);
+}
+.nav-folder-title[data-path="Cursos"] .nav-folder-collapse-indicator { color: #60A5FA; }
+
+.nav-folder-title[data-path="Cursos/BI"] {
+  color: #60A5FA;
+  --nav-item-color: #60A5FA;
+  --nav-item-color-hover: #60A5FA;
+  --nav-collapse-icon-color: #60A5FA;
+  font-weight: 650;
+  border-inline-start: 3px solid #60A5FA;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #60A5FA 9%, transparent);
+}
+.nav-folder-title[data-path="Cursos/BI"] .nav-folder-collapse-indicator { color: #60A5FA; }
+
+.nav-folder-title[data-path="Cursos/Construcción de Software"] {
+  color: #A78BFA;
+  --nav-item-color: #A78BFA;
+  --nav-item-color-hover: #A78BFA;
+  --nav-collapse-icon-color: #A78BFA;
+  font-weight: 650;
+  border-inline-start: 3px solid #A78BFA;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #A78BFA 9%, transparent);
+}
+.nav-folder-title[data-path="Cursos/Construcción de Software"] .nav-folder-collapse-indicator { color: #A78BFA; }
+
+.nav-folder-title[data-path="Cursos/Calidad de Software"] {
+  color: #F472B6;
+  --nav-item-color: #F472B6;
+  --nav-item-color-hover: #F472B6;
+  --nav-collapse-icon-color: #F472B6;
+  font-weight: 650;
+  border-inline-start: 3px solid #F472B6;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #F472B6 9%, transparent);
+}
+.nav-folder-title[data-path="Cursos/Calidad de Software"] .nav-folder-collapse-indicator { color: #F472B6; }
+
+.nav-folder-title[data-path="Cursos/Epistemologia"] {
+  color: #34D399;
+  --nav-item-color: #34D399;
+  --nav-item-color-hover: #34D399;
+  --nav-collapse-icon-color: #34D399;
+  font-weight: 650;
+  border-inline-start: 3px solid #34D399;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #34D399 9%, transparent);
+}
+.nav-folder-title[data-path="Cursos/Epistemologia"] .nav-folder-collapse-indicator { color: #34D399; }
+
+.nav-folder-title[data-path="Cursos/Deontologia"] {
+  color: #FBBF24;
+  --nav-item-color: #FBBF24;
+  --nav-item-color-hover: #FBBF24;
+  --nav-collapse-icon-color: #FBBF24;
+  font-weight: 650;
+  border-inline-start: 3px solid #FBBF24;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #FBBF24 9%, transparent);
+}
+.nav-folder-title[data-path="Cursos/Deontologia"] .nav-folder-collapse-indicator { color: #FBBF24; }
+
+.nav-folder-title[data-path="Cursos/MIC"] {
+  color: #FB923C;
+  --nav-item-color: #FB923C;
+  --nav-item-color-hover: #FB923C;
+  --nav-collapse-icon-color: #FB923C;
+  font-weight: 650;
+  border-inline-start: 3px solid #FB923C;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #FB923C 9%, transparent);
+}
+.nav-folder-title[data-path="Cursos/MIC"] .nav-folder-collapse-indicator { color: #FB923C; }
+
+.nav-folder-title[data-path="Cursos/Evaluación y mejora"] {
+  color: #22D3EE;
+  --nav-item-color: #22D3EE;
+  --nav-item-color-hover: #22D3EE;
+  --nav-collapse-icon-color: #22D3EE;
+  font-weight: 650;
+  border-inline-start: 3px solid #22D3EE;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #22D3EE 9%, transparent);
+}
+.nav-folder-title[data-path="Cursos/Evaluación y mejora"] .nav-folder-collapse-indicator { color: #22D3EE; }
+
+.nav-folder-title[data-path="Cursos/GCC"] {
+  color: #F87171;
+  --nav-item-color: #F87171;
+  --nav-item-color-hover: #F87171;
+  --nav-collapse-icon-color: #F87171;
+  font-weight: 650;
+  border-inline-start: 3px solid #F87171;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #F87171 9%, transparent);
+}
+.nav-folder-title[data-path="Cursos/GCC"] .nav-folder-collapse-indicator { color: #F87171; }
+
+.nav-folder-title[data-path="Mis Proyectos 👀"] {
+  color: #C084FC;
+  --nav-item-color: #C084FC;
+  --nav-item-color-hover: #C084FC;
+  --nav-collapse-icon-color: #C084FC;
+  font-weight: 650;
+  border-inline-start: 3px solid #C084FC;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #C084FC 9%, transparent);
+}
+.nav-folder-title[data-path="Mis Proyectos 👀"] .nav-folder-collapse-indicator { color: #C084FC; }
+
+.nav-file-title[data-path="Proyectos personales.md"] {
+  color: #C084FC;
+  --nav-item-color: #C084FC;
+  --nav-item-color-hover: #C084FC;
+  --nav-collapse-icon-color: #C084FC;
+  font-weight: 650;
+  border-inline-start: 3px solid #C084FC;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #C084FC 9%, transparent);
+}
+.nav-file-title[data-path="Proyectos personales.md"] .nav-folder-collapse-indicator { color: #C084FC; }
+
+.nav-folder-title[data-path="Trabajo"] {
+  color: #FB923C;
+  --nav-item-color: #FB923C;
+  --nav-item-color-hover: #FB923C;
+  --nav-collapse-icon-color: #FB923C;
+  font-weight: 650;
+  border-inline-start: 3px solid #FB923C;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #FB923C 9%, transparent);
+}
+.nav-folder-title[data-path="Trabajo"] .nav-folder-collapse-indicator { color: #FB923C; }
+
+.nav-file-title[data-path="Trabajo.md"] {
+  color: #FB923C;
+  --nav-item-color: #FB923C;
+  --nav-item-color-hover: #FB923C;
+  --nav-collapse-icon-color: #FB923C;
+  font-weight: 650;
+  border-inline-start: 3px solid #FB923C;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #FB923C 9%, transparent);
+}
+.nav-file-title[data-path="Trabajo.md"] .nav-folder-collapse-indicator { color: #FB923C; }
+
+.nav-folder-title[data-path="Conocimiento"] {
+  color: #2DD4BF;
+  --nav-item-color: #2DD4BF;
+  --nav-item-color-hover: #2DD4BF;
+  --nav-collapse-icon-color: #2DD4BF;
+  font-weight: 650;
+  border-inline-start: 3px solid #2DD4BF;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #2DD4BF 9%, transparent);
+}
+.nav-folder-title[data-path="Conocimiento"] .nav-folder-collapse-indicator { color: #2DD4BF; }
+
+.nav-file-title[data-path="Conocimiento.md"] {
+  color: #2DD4BF;
+  --nav-item-color: #2DD4BF;
+  --nav-item-color-hover: #2DD4BF;
+  --nav-collapse-icon-color: #2DD4BF;
+  font-weight: 650;
+  border-inline-start: 3px solid #2DD4BF;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #2DD4BF 9%, transparent);
+}
+.nav-file-title[data-path="Conocimiento.md"] .nav-folder-collapse-indicator { color: #2DD4BF; }
+
+.nav-folder-title[data-path="Diario"] {
+  color: #FACC15;
+  --nav-item-color: #FACC15;
+  --nav-item-color-hover: #FACC15;
+  --nav-collapse-icon-color: #FACC15;
+  font-weight: 650;
+  border-inline-start: 3px solid #FACC15;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #FACC15 9%, transparent);
+}
+.nav-folder-title[data-path="Diario"] .nav-folder-collapse-indicator { color: #FACC15; }
+
+.nav-folder-title[data-path="Revisiones"] {
+  color: #FACC15;
+  --nav-item-color: #FACC15;
+  --nav-item-color-hover: #FACC15;
+  --nav-collapse-icon-color: #FACC15;
+  font-weight: 650;
+  border-inline-start: 3px solid #FACC15;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #FACC15 9%, transparent);
+}
+.nav-folder-title[data-path="Revisiones"] .nav-folder-collapse-indicator { color: #FACC15; }
+
+.nav-file-title[data-path="Revisión semanal.md"] {
+  color: #FACC15;
+  --nav-item-color: #FACC15;
+  --nav-item-color-hover: #FACC15;
+  --nav-collapse-icon-color: #FACC15;
+  font-weight: 650;
+  border-inline-start: 3px solid #FACC15;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #FACC15 9%, transparent);
+}
+.nav-file-title[data-path="Revisión semanal.md"] .nav-folder-collapse-indicator { color: #FACC15; }
+
+.nav-folder-title[data-path="Archivo"] {
+  color: #94A3B8;
+  --nav-item-color: #94A3B8;
+  --nav-item-color-hover: #94A3B8;
+  --nav-collapse-icon-color: #94A3B8;
+  font-weight: 650;
+  border-inline-start: 3px solid #94A3B8;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #94A3B8 9%, transparent);
+}
+.nav-folder-title[data-path="Archivo"] .nav-folder-collapse-indicator { color: #94A3B8; }
+
+.nav-folder-title[data-path="Plantillas"] {
+  color: #64748B;
+  --nav-item-color: #64748B;
+  --nav-item-color-hover: #64748B;
+  --nav-collapse-icon-color: #64748B;
+  font-weight: 650;
+  border-inline-start: 3px solid #64748B;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #64748B 9%, transparent);
+}
+.nav-folder-title[data-path="Plantillas"] .nav-folder-collapse-indicator { color: #64748B; }
+
+.nav-file-title[data-path="Inicio.md"] {
+  color: #F8FAFC;
+  --nav-item-color: #F8FAFC;
+  --nav-item-color-hover: #F8FAFC;
+  --nav-collapse-icon-color: #F8FAFC;
+  font-weight: 650;
+  border-inline-start: 3px solid #F8FAFC;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #F8FAFC 9%, transparent);
+}
+.nav-file-title[data-path="Inicio.md"] .nav-folder-collapse-indicator { color: #F8FAFC; }
+
+.nav-file-title[data-path="Bandeja de entrada.md"] {
+  color: #F8FAFC;
+  --nav-item-color: #F8FAFC;
+  --nav-item-color-hover: #F8FAFC;
+  --nav-collapse-icon-color: #F8FAFC;
+  font-weight: 650;
+  border-inline-start: 3px solid #F8FAFC;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #F8FAFC 9%, transparent);
+}
+.nav-file-title[data-path="Bandeja de entrada.md"] .nav-folder-collapse-indicator { color: #F8FAFC; }
+
+.nav-file-title[data-path="Tareas.md"] {
+  color: #F8FAFC;
+  --nav-item-color: #F8FAFC;
+  --nav-item-color-hover: #F8FAFC;
+  --nav-collapse-icon-color: #F8FAFC;
+  font-weight: 650;
+  border-inline-start: 3px solid #F8FAFC;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #F8FAFC 9%, transparent);
+}
+.nav-file-title[data-path="Tareas.md"] .nav-folder-collapse-indicator { color: #F8FAFC; }
+
+.nav-file-title[data-path="Estudios.md"] {
+  color: #60A5FA;
+  --nav-item-color: #60A5FA;
+  --nav-item-color-hover: #60A5FA;
+  --nav-collapse-icon-color: #60A5FA;
+  font-weight: 650;
+  border-inline-start: 3px solid #60A5FA;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, #60A5FA 9%, transparent);
+}
+.nav-file-title[data-path="Estudios.md"] .nav-folder-collapse-indicator { color: #60A5FA; }

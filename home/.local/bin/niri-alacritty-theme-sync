@@ -1,0 +1,74 @@
+#!/usr/bin/python3
+"""Apply palette updates to existing Alacritty windows in this Niri display."""
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import tomllib
+from gi.repository import Gio, GLib
+
+palette = Path('__HOME__/.config/niri-session/alacritty/themes/noctalia.toml')
+pending = 0
+last_applied = None
+
+
+def leaves(data, prefix='colors'):
+    for key, value in data.items():
+        name = prefix + '.' + key
+        if isinstance(value, dict):
+            yield from leaves(value, name)
+        else:
+            yield name + '=' + json.dumps(value)
+
+
+def reload():
+    global pending, last_applied
+    pending = 0
+    try:
+        data = palette.read_bytes()
+        colors = tomllib.loads(data.decode())['colors']
+        runtime = Path(os.environ['XDG_RUNTIME_DIR'])
+        display = os.environ['WAYLAND_DISPLAY']
+        sockets = sorted(runtime.glob('Alacritty-' + display + '-*.sock'))
+        signature = (hashlib.sha256(data).hexdigest(), tuple((str(p), p.stat().st_ino) for p in sockets))
+        if signature == last_applied:
+            return False
+        applied = []
+        for socket in sockets:
+            result = subprocess.run(['/usr/bin/alacritty', 'msg', '--socket', str(socket), 'config', '--window-id=-1', *leaves(colors)], capture_output=True, text=True, timeout=3)
+            if result.returncode == 0:
+                applied.append(str(socket))
+            else:
+                print(result.stderr, flush=True)
+        state = Path.home() / '.local/state/niri-live-theme'
+        state.mkdir(parents=True, exist_ok=True)
+        if len(applied) == len(sockets):
+            last_applied = signature
+        (state / 'alacritty.json').write_text(json.dumps({'palette_sha256': hashlib.sha256(data).hexdigest(), 'sockets': applied}))
+    except (OSError, KeyError, ValueError, subprocess.TimeoutExpired) as error:
+        print('Alacritty theme sync:', error, flush=True)
+    return False
+
+
+def changed(monitor, file, other, event):
+    global pending
+    if file.get_basename() != palette.name:
+        return
+    if pending:
+        GLib.source_remove(pending)
+    pending = GLib.timeout_add(200, reload)
+
+
+monitor = Gio.File.new_for_path(str(palette.parent)).monitor_directory(Gio.FileMonitorFlags.NONE, None)
+monitor.connect('changed', changed)
+def reconcile():
+    # Recover missed file events and discover terminals opened after a palette change.
+    if not pending:
+        reload()
+    return True
+
+
+reload()
+GLib.timeout_add_seconds(1, reconcile)
+GLib.MainLoop().run()

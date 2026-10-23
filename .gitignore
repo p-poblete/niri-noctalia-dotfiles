@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.lock
+*.bak
+*.so
+*.o
+.env
+.env.*
+hosts.yml
+credentials*
+*token*
+backdrop
+private/
+screenshots/

@@ -1,0 +1,10 @@
+// Blur the desktop only while the Fuzzel backdrop exists.
+layer-rule {
+    match namespace="^ricing-fuzzel-backdrop$"
+    background-effect {
+        blur true
+        xray false
+        noise 0.015
+        saturation 1.0
+    }
+}

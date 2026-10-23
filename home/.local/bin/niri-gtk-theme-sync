@@ -1,0 +1,56 @@
+#!/usr/bin/python3
+"""Notify GTK settings clients after Noctalia writes its palette."""
+import hashlib
+import os
+from pathlib import Path
+import tomllib
+from gi.repository import Gio, GLib
+
+os.environ['XDG_CONFIG_HOME'] = str(Path.home() / '.config/niri-session')
+os.environ['DCONF_PROFILE'] = str(Path.home() / '.config/niri/dconf-profile')
+config = Path(os.environ['XDG_CONFIG_HOME'])
+settings = Gio.Settings.new('org.gnome.desktop.interface')
+pending = 0
+last = None
+def reload():
+    global pending, last
+    pending = 0
+    try:
+        files = [config / f'gtk-{v}.0/noctalia.css' for v in (3, 4)]
+        data = b''.join(p.read_bytes() for p in files)
+        state = tomllib.loads((Path.home() / '.local/state/noctalia/settings.toml').read_text())
+        mode = state['theme'].get('mode', 'dark')
+        digest = hashlib.sha256(data + mode.encode()).hexdigest()
+        if digest == last:
+            return False
+        target = 'adw-gtk3-dark' if mode == 'dark' else 'adw-gtk3'
+        settings.set_string('color-scheme', 'prefer-dark' if mode == 'dark' else 'prefer-light')
+        # A changed CSS file alone does not notify existing GtkSettings clients.
+        settings.set_string('gtk-theme', 'Adwaita-dark' if mode == 'dark' else 'Adwaita')
+        Gio.Settings.sync()
+        def finish_reload():
+            settings.set_string('gtk-theme', target)
+            Gio.Settings.sync()
+            return False
+        GLib.timeout_add(150, finish_reload)
+        last = digest
+        print('GTK palette synchronized:', digest, flush=True)
+    except (OSError, KeyError, ValueError) as error:
+        print('GTK theme sync:', error, flush=True)
+    return False
+
+
+def changed(*args):
+    global pending
+    if pending:
+        GLib.source_remove(pending)
+    pending = GLib.timeout_add(500, reload)
+
+
+monitors = []
+for directory in [config / 'gtk-3.0', config / 'gtk-4.0', Path.home() / '.local/state/noctalia']:
+    monitor = Gio.File.new_for_path(str(directory)).monitor_directory(Gio.FileMonitorFlags.NONE, None)
+    monitor.connect('changed', changed)
+    monitors.append(monitor)
+reload()
+GLib.MainLoop().run()

@@ -1,0 +1,11 @@
+[Unit]
+Description=Live Noctalia palette for Alacritty in Niri
+PartOf=niri.service
+After=niri.service
+
+[Service]
+ExecStart=__HOME__/.local/bin/niri-alacritty-theme-sync
+Restart=on-failure
+RestartSec=2
+Environment=XDG_CONFIG_HOME=__HOME__/.config/niri-session
+Environment=DCONF_PROFILE=__HOME__/.config/niri/dconf-profile

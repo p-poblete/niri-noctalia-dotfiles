@@ -1,0 +1,540 @@
+config_version = 15
+
+[accessibility]
+ui_scale = 0.7500000037252903
+
+[backdrop]
+blur_intensity = 0.14999999664723873
+tint_intensity = 0.0
+
+[bar]
+order = [ "principal" ]
+
+    [bar.principal]
+    background_opacity = 0.89999997988343239
+    center = [ "clock", "cat", "Teclado", "widget" ]
+    contact_shadow = true
+    end = [
+        "bar_2",
+        "ocr",
+        "status",
+        "bar",
+        "media",
+        "notifications",
+        "bluetooth",
+        "network",
+        "battery",
+        "control-center",
+        "session"
+    ]
+    font_weight = 400
+    radius = 30
+    scale = 0.80000000447034836
+    show_on_workspace_switch = false
+    start = [ "launcher", "wallpaper", "workspaces", "group:g1", "wallhaven", "theme_mode", "toggle" ]
+
+        [[bar.principal.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border_width = 1.0
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "volume", "brightness" ]
+        opacity = 1.0
+        padding = 6.0
+
+[desktop_widgets]
+schema_version = 2
+widget_order = [
+    "desktop-widget-0000000000000001",
+    "desktop-widget-0000000000000002",
+    "desktop-widget-0000000000000003",
+    "desktop-widget-0000000000000004",
+    "desktop-widget-0000000000000005"
+]
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 96.0
+    box_width = 208.0
+    cx = 88.0
+    cy = 800.0
+    output = "eDP-1"
+    placement_height = 864.0
+    placement_width = 1536.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
+        shadow = true
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 76.5
+    cy = 704.0
+    output = "eDP-1"
+    placement_height = 864.0
+    placement_width = 1536.0
+    rotation = 0.0
+    type = "weather"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = false
+        color = "primary"
+        forecast_days = 1
+        show_forecast = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000003]
+    box_height = 192.0
+    box_width = 160.0
+    cx = 1472.0
+    cy = 75.138435363769531
+    output = "eDP-1"
+    placement_height = 864.0
+    placement_width = 1536.0
+    rotation = 0.52359879016876221
+    type = "sticker"
+    enabled = false
+
+        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background = false
+        image_path = ""
+        opacity = 1.0
+
+    [desktop_widgets.widget.desktop-widget-0000000000000004]
+    box_height = 144.0
+    box_width = 144.0
+    cx = 1440.0
+    cy = 198.27687072753906
+    output = "eDP-1"
+    placement_height = 864.0
+    placement_width = 1536.0
+    rotation = -0.2617993950843811
+    type = "sticker"
+    enabled = false
+
+        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        background = false
+        image_path = ""
+        opacity = 1.0
+
+    [desktop_widgets.widget.desktop-widget-0000000000000005]
+    box_height = 112.0
+    box_width = 768.0
+    cx = 768.0
+    cy = 808.0
+    output = "eDP-1"
+    placement_height = 864.0
+    placement_width = 1536.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
+        background = false
+        bands = 32
+        centered = false
+        mirrored = false
+        show_when_idle = false
+
+[dock]
+active_scale = 0.90000001341104507
+auto_hide = true
+background_opacity = 0.99999997764825821
+border_width = 0.0
+concave_edge_corners = false
+cross_axis_padding = 4
+enabled = true
+icon_size = 32
+inactive_opacity = 0.94999999999999996
+inactive_scale = 0.88
+item_spacing = 4
+magnification = true
+magnification_scale = 1.4000000059604645
+main_axis_padding = 8
+margin_edge = 8
+position = "left"
+radius = 20
+radius_bottom_left = 20
+radius_bottom_right = 20
+radius_top_left = 20
+radius_top_right = 20
+reserve_space = false
+shadow = false
+smart_auto_hide = false
+
+[lockscreen]
+blur_intensity = 0.34999999999999998
+tint_intensity = 0.20000000000000001
+transition = [ "fade" ]
+transition_duration = 650.0
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "ricing-lock-time@eDP-1",
+    "ricing-lock-date@eDP-1",
+    "ricing-lock-identity@eDP-1",
+    "lockscreen-login-box@eDP-1",
+    "ricing-lock-time@HDMI-A-1",
+    "ricing-lock-date@HDMI-A-1",
+    "ricing-lock-identity@HDMI-A-1",
+    "lockscreen-login-box@HDMI-A-1",
+    "lockscreen-widget-0000000000000001"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 82.0
+    box_width = 720.0
+    cx = 1478.4000244140625
+    cy = 799.20001220703125
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface"
+        background_opacity = 0.22
+        background_radius = 24.0
+        center_password_text = true
+        input_opacity = 0.32000000000000001
+        input_radius = 14.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = false
+        show_password_reveal = true
+        show_session_buttons = false
+        show_unlock_hint = true
+        show_weather = false
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 128.0
+    box_width = 720.0
+    cx = 1168.0
+    cy = 786.239990234375
+    output = "eDP-1"
+    placement_height = 864.0
+    placement_width = 1536.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.0
+        background_radius = 0.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = false
+        show_login_button = false
+        show_media = false
+        show_password_reveal = false
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1389.25
+    cy = 77.760009765625
+    output = "eDP-1"
+    placement_height = 864.0
+    placement_width = 1536.0
+    rotation = 0.0
+    type = "media_player"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        album_art_background = true
+        album_art_blur = 0
+        audio_visualizer = true
+        background = false
+        hide_when_no_media = true
+        layout = "horizontal"
+        shadow = false
+
+    [lockscreen_widgets.widget."ricing-lock-date@HDMI-A-1"]
+    box_height = 28.0
+    box_width = 648.0
+    cx = 242.0
+    cy = 540.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 1.5707963705062866
+    type = "clock"
+
+        [lockscreen_widgets.widget."ricing-lock-date@HDMI-A-1".settings]
+        background = false
+        center_text = true
+        clock_style = "digital"
+        color = "on_surface_variant"
+        font_family = "Ubuntu Sans"
+        format = "{:%A %d de %B}"
+        shadow = true
+
+    [lockscreen_widgets.widget."ricing-lock-date@eDP-1"]
+    box_height = 28.0
+    box_width = 518.4000244140625
+    cx = 190.00001525878906
+    cy = 432.0
+    output = "eDP-1"
+    placement_height = 864.0
+    placement_width = 1536.0
+    rotation = 1.5707963705062866
+    type = "clock"
+
+        [lockscreen_widgets.widget."ricing-lock-date@eDP-1".settings]
+        background = false
+        center_text = true
+        clock_style = "digital"
+        color = "on_surface"
+        font_family = "Ubuntu Mono"
+        format = "{:%A %d de %B}"
+        shadow = false
+
+    [lockscreen_widgets.widget."ricing-lock-identity@HDMI-A-1"]
+    box_height = 64.0
+    box_width = 420.0
+    cx = 1478.4000244140625
+    cy = 648.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "label"
+
+        [lockscreen_widgets.widget."ricing-lock-identity@HDMI-A-1".settings]
+        background = false
+        color = "on_surface"
+        description = "Sesión bloqueada"
+        font_family = "Ubuntu Sans"
+        opacity = 0.90000000000000002
+        shadow = true
+        title = "__USER__"
+
+    [lockscreen_widgets.widget."ricing-lock-identity@eDP-1"]
+    box_height = 48.0
+    box_width = 384.0
+    cx = 1440.0
+    cy = 698.239990234375
+    output = "eDP-1"
+    placement_height = 864.0
+    placement_width = 1536.0
+    rotation = 0.0
+    type = "label"
+
+        [lockscreen_widgets.widget."ricing-lock-identity@eDP-1".settings]
+        background = false
+        color = "on_surface"
+        description = ""
+        font_family = "Ubuntu Mono"
+        opacity = 1.0
+        shadow = false
+        title = "__USER__"
+
+    [lockscreen_widgets.widget."ricing-lock-time@HDMI-A-1"]
+    box_height = 200.0
+    box_width = 885.5999755859375
+    cx = 112.0
+    cy = 540.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 1.5707963705062866
+    type = "clock"
+
+        [lockscreen_widgets.widget."ricing-lock-time@HDMI-A-1".settings]
+        background = false
+        center_text = true
+        clock_style = "digital"
+        color = "on_surface"
+        font_family = "Ubuntu Sans"
+        format = "{:%H:%M}"
+        shadow = true
+
+    [lockscreen_widgets.widget."ricing-lock-time@eDP-1"]
+    box_height = 190.08000183105469
+    box_width = 708.47998046875
+    cx = 107.04000091552734
+    cy = 432.0
+    output = "eDP-1"
+    placement_height = 864.0
+    placement_width = 1536.0
+    rotation = 1.5707963705062866
+    type = "clock"
+
+        [lockscreen_widgets.widget."ricing-lock-time@eDP-1".settings]
+        background = false
+        center_text = true
+        clock_style = "digital"
+        color = "on_surface"
+        font_family = "Ubuntu Sans Mono"
+        format = "{:%H:%M}"
+        shadow = false
+
+[notification]
+background_opacity = 0.81999999999999995
+collapse_on_dismiss = false
+enable_daemon = true
+offset_x = 20
+offset_y = 16
+position = "top_right"
+scale = 0.90000000000000002
+show_actions = true
+show_app_name = true
+
+[plugin_settings."noctalia/mpvpaper"]
+video_directory = "__HOME__/Vídeos"
+
+[plugin_settings."noctalia/wallhaven"]
+download_dir = ""
+
+[plugin_settings."salemsayed/codexbar-meter"]
+barProviderLimit = 1
+codexbarPath = "__HOME__/.local/bin/codexbar"
+refreshIntervalSec = 60
+
+[plugins]
+enabled = [
+    "noctalia/mpvpaper",
+    "noctalia/wallhaven",
+    "noctalia/bongocat",
+    "fel/ocr",
+    "decksters-lab/palette-creator",
+    "icefish/phone-connect",
+    "thepunkoff/pomodoro",
+    "icefish/phone-operate",
+    "salemsayed/codexbar-meter"
+]
+
+[shell]
+app_icon_color = "primary"
+app_icon_colorize = false
+font_family = "Ubuntu Sans"
+lang = "es"
+settings_show_advanced = true
+
+    [shell.launcher]
+    compact = true
+
+    [shell.panel]
+    clipboard_placement = "attached"
+    launcher_placement = "attached"
+    open_near_click_launcher = true
+    polkit_placement = "attached"
+    transparency_mode = "glass"
+
+    [shell.screen_corners]
+    enabled = true
+
+    [shell.shadow]
+    direction = "center"
+
+[theme]
+builtin = "Tokyo-Night"
+community_palette = "spiderman"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "faithful"
+
+    [theme.templates]
+    builtin_ids = [ "alacritty", "gtk3", "gtk4", "niri" ]
+    community_ids = [ "obsidian", "vscode", "fuzzel" ]
+
+[widget.Teclado]
+enabled = false
+type = "custom_button"
+
+    [widget.Teclado.actions]
+    left = "exec pkill -RTMIN wvkbd-mobintl || wvkbd-mobintl -L 300 --hidden"
+
+[widget.bar]
+type = "icefish/phone-connect:bar"
+
+[widget.bar_2]
+type = "salemsayed/codexbar-meter:bar"
+
+[widget.battery]
+display_mode = "graphic"
+show_label = false
+
+[widget.brightness]
+show_label = false
+
+[widget.cat]
+audio_spectrum = true
+tappy_mode = true
+type = "noctalia/bongocat:cat"
+use_mpris_filter = true
+
+[widget.clock]
+format = "{:%d de %B, %H:%M}"
+
+[widget.media]
+capsule = true
+hide_when_no_media = true
+
+[widget.mpvpaper]
+type = "noctalia/mpvpaper:mpvpaper"
+
+[widget.network]
+show_label = false
+
+[widget.notifications]
+hide_when_no_unread = true
+
+[widget.ocr]
+enabled = false
+type = "fel/ocr:ocr"
+
+[widget.status]
+enabled = false
+type = "icefish/phone-operate:status"
+
+[widget.toggle]
+enabled = false
+type = "decksters-lab/palette-creator:toggle"
+
+[widget.volume]
+show_label = false
+
+[widget.wallhaven]
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.widget]
+type = "thepunkoff/pomodoro:widget"
+[wallpaper]
+directory = "__HOME__/Imágenes"
+transition = ["fade"]
+transition_on_startup = true
+[wallpaper.default]
+path = "__HOME__/Imágenes/Brave-Liquid-Graphite.png"
+[[plugins.source]]
+kind = "git"
+location = "https://github.com/noctalia-dev/official-plugins"
+name = "official"
+[[plugins.source]]
+kind = "git"
+location = "https://github.com/noctalia-dev/community-plugins"
+name = "community"

@@ -1,0 +1,11 @@
+// Sombra anterior con tinte del tema activo, sin borde.
+layout {
+    shadow {
+        on
+        softness 15
+        spread 3
+        offset x=0 y=5
+        color "{{colors.primary.default.hex}}26"
+        inactive-color "{{colors.primary.default.hex}}26"
+    }
+}

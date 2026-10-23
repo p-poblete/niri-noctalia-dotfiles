@@ -1,0 +1,11 @@
+#!/bin/sh
+case ":${XDG_CURRENT_DESKTOP:-}:" in
+    *:niri:*) niri_session=yes ;;
+    *) niri_session=${NIRI_SOCKET:+yes} ;;
+esac
+if [ "${niri_session:-}" = yes ]; then
+    export XDG_CONFIG_HOME=__HOME__/.config/niri-session
+    export DCONF_PROFILE=__HOME__/.config/niri/dconf-profile
+    exec /usr/bin/alacritty --config-file "$XDG_CONFIG_HOME/alacritty/alacritty.toml" "$@"
+fi
+exec /usr/bin/alacritty "$@"

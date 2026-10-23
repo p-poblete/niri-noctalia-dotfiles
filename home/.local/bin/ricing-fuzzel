@@ -1,0 +1,50 @@
+#!/usr/bin/python3
+"""Build Fuzzel's active Noctalia palette and keep its blur alive until exit."""
+from pathlib import Path
+import configparser
+import fcntl
+import os
+import re
+import signal
+import subprocess
+import sys
+
+HOME_DIR = Path('__HOME__')
+CONFIG_DIR = HOME_DIR / '.config/niri-session/fuzzel'
+
+def prepare():
+    parser = configparser.ConfigParser(interpolation=None)
+    parser.read(CONFIG_DIR / 'ricing-palette.ini')
+    colors = {}
+    for key in ('background','text','match','selection','selection-text','selection-match','border'):
+        value = parser['colors'][key].strip().removeprefix('#')
+        if not re.fullmatch(r'[0-9a-fA-F]{8}', value):
+            raise ValueError(f'Invalid palette color: {key}')
+        colors[key] = value
+    output = (CONFIG_DIR / 'fuzzel-base.ini').read_text() + '\n[colors]\n'
+    output += ''.join(f'{key}={value}\n' for key,value in colors.items())
+    target = CONFIG_DIR / 'fuzzel-combinado.ini'
+    temp = target.with_suffix('.tmp')
+    temp.write_text(output)
+    temp.replace(target)
+    return target
+
+if __name__ == '__main__':
+    # A repeat keypress must not create multiple backdrops.
+    lock = open(HOME_DIR / '.local/share/ricing-fuzzel/launcher.lock', 'w')
+    try:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        sys.exit(0)
+    target = prepare()
+    if '--prepare-only' in sys.argv:
+        sys.exit(0)
+    process = subprocess.Popen([
+        str(HOME_DIR / '.local/share/ricing-fuzzel/backdrop'),
+        '/usr/bin/fuzzel', '--config=' + str(target),
+    ])
+    def close(signum, frame):
+        process.terminate()
+    signal.signal(signal.SIGTERM, close)
+    signal.signal(signal.SIGINT, close)
+    sys.exit(process.wait())

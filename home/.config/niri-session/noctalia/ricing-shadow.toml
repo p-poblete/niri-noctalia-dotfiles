@@ -1,0 +1,4 @@
+[theme.templates.user.ricing_shadow]
+enabled = true
+input_path = "__HOME__/.config/niri-session/noctalia/templates/ricing-shadow.kdl"
+output_path = "__HOME__/.config/niri/ricing-shadow.kdl"

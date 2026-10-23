@@ -1,0 +1,4 @@
+.overview-bg {
+    background-color: rgba(20, 20, 30, 0.5) !important;
+    backdrop-filter: blur(16px) !important;
+}

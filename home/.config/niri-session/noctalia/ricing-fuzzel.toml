@@ -1,0 +1,4 @@
+[theme.templates.user.ricing_fuzzel]
+enabled = true
+input_path = "__HOME__/.config/niri-session/noctalia/templates/ricing-fuzzel.ini"
+output_path = "__HOME__/.config/niri-session/fuzzel/ricing-palette.ini"
